@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+</head>
+<body>
+	
+    <h2>Received User Info</h2>
+	Employee_ID: ${emp_id} <br/>
+	Name: ${name} <br/>
+	Firts_Name: ${first_name} <br/>
+	Last_Name: ${last_name} <br/>
+	Department: ${department} <br/>
+	Salary: ${salary} <br/>
+	Experience: ${experience} <br/>
+	Joining_Date: ${joining_date} <br/>
+	Date_OF_Birth: ${date_of_birth} <br/>
+	City: ${city} <br/>
+	State: ${state} <br/>
+	Country: ${country} <br/>
+	Zip_Code: ${zip_code} 
+     
+</body>
+</html>

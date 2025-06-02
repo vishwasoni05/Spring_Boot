@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MySpringApp</title>
+	</head>
+	<body>
+		<form action="/sent" method="post">
+			<label for="id">Id:</label>
+			<input type="number" name="id" id="id" /><br><br>
+		    <label for="name">Name:</label>
+		    <input type="text" name="name" id="name" /><br><br>
+		    <label for="email">Email:</label>
+		    <input type="email" name="email" id="email" /><br><br>
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password" /><br><br>
+			
+			<input type="submit" value="Register" />
+		</form>
+	</body>
+</html>

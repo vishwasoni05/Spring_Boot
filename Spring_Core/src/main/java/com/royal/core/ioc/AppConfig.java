@@ -1,0 +1,30 @@
+package com.royal.core.ioc;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+	@Bean(name="foodItem1")
+	public Food food1() {
+		return new Food(1,"Burger",100);
+	}
+	
+	@Bean(name="foodItem2")
+	public Food food2() {
+		return new Food(2,"Pav-Bhaji",150);
+	}
+	
+	@Bean(name="p1")
+	public Places place1() {
+		return new Places(1, "Rajasthan", new ArrayList<String>(Arrays.asList("Jaipur", "Udaipur", "Shrinathji")));
+	}
+	
+	@Bean(name="p2")
+	public Places place2() {
+		return new Places(2, "Mumbai", new ArrayList<String>(Arrays.asList("GateWayOfIndia", "TajHotel", "JuhuBeach","Mahabaleshwar")));
+	}
+}

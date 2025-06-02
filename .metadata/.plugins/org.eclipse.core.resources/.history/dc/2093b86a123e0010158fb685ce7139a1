@@ -1,0 +1,17 @@
+package com.royal.core.ioc;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+	@Bean(name="foodItem1")
+	public Food food1() {
+		return new Food(1,"Burger",100);
+	}
+	
+	@Bean(name="foodItem2")
+	public Food food2() {
+		return new Food(2,"Pav-Bhaji",150);
+	}
+}

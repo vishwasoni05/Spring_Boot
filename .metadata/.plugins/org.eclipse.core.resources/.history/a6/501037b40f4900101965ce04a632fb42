@@ -1,0 +1,24 @@
+package com.royal.core;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.royal.core.ioc.Appconfig;
+
+@SpringBootApplication
+public class SpringCoreApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringCoreApplication.class, args);
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(Appconfig.class);
+	
+		System.out.println(context.getBean("f1").toString());
+		System.out.println(context.getBean("f2").toString());
+		System.out.println(context.getBean("p1").toString());
+		System.out.println(context.getBean("p2").toString());
+	}
+
+}

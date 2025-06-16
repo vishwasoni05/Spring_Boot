@@ -1,0 +1,5 @@
+package com.royal.core.repository;
+
+public class UserRepository {
+
+}

@@ -1,0 +1,5 @@
+package com.royal.core.services;
+
+public class UserService {
+
+}

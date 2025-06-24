@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #fff8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #fffaf4;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(139, 69, 19, 0.1);
+        }
+        h2 {
+            color: #8B4513;
+            font-family: 'Brush Script MT', cursive;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .btn-add {
+            background-color: #d4af37;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .btn-add:hover {
+            opacity: 0.9;
+        }
+        .btn-action {
+            margin-right: 5px;
+        }
+        table {
+            background-color: white;
+        }
+        th {
+            background-color: #f3e9dc;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Restaurant List</h2>
+    <a href="/restaurant/add" class="btn btn-add">Add New Restaurant</a>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Cuisine</th>
+                <th>Rating</th>
+                <th>Open</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="restaurant : ${restaurants}">
+                <td th:text="${restaurant.id}">1</td>
+                <td th:text="${restaurant.name}">Sample Name</td>
+                <td th:text="${restaurant.location}">City</td>
+                <td th:text="${restaurant.cuisineType}">Indian</td>
+                <td th:text="${restaurant.averageRating}">4.5</td>
+                <td th:text="${restaurant.isOpen} ? 'Yes' : 'No'">Yes</td>
+                <td>
+                    <a th:href="@{'/restaurant/view/' + ${restaurant.id}}" class="btn btn-sm btn-info btn-action">View</a>
+                    <a th:href="@{'/restaurant/edit/' + ${restaurant.id}}" class="btn btn-sm btn-warning btn-action">Edit</a>
+                    <a th:href="@{'/restaurant/delete/' + ${restaurant.id}}" class="btn btn-sm btn-danger btn-action" onclick="return confirm('Are you sure you want to delete this restaurant?')">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

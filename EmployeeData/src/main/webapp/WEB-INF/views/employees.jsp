@@ -9,7 +9,7 @@
 <body>
 <h2>Employee List</h2>
 <a href="/employees/add">Add New Employee</a>
-<table border="1">
+<table border="1">0
     <tr>
         <th>ID</th>
         <th>Name</th>
